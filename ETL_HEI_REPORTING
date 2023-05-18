@@ -41,6 +41,7 @@ create or replace PACKAGE BODY                   ETL_HEI_REPORTING AS
                                          2. Added to cursor "cur_get_output_table" in CREATE_HEI_AC procedure. Added "subj_code to the PARTITION BY function because it was limiting students courses output.
    2.91       03/13/2022  jperry7        1. Added a join to SFRSTCR table in the CREAET_HEI_AC procedure main program to only include students in the AC file that are also in the SE file. 
    2.92       06/08/2022  jperry7        1. Added case statemnt in the SE file to fill NULL values in SPRADDR_STAT_CODE with 'ZZ' and to transform 'FR' to 'ZZ' 
+   2.93       05/18/2023  jperry7        1. Added "DBMS_OUTPUT.ENABLE(1000000);" to SE package
 ******************************************************************************/
 
   PROCEDURE ODHE_DropAdd(P_Term VARCHAR2) IS
